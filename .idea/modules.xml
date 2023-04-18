@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Challenges/Challenges.iml" filepath="$PROJECT_DIR$/Challenges/Challenges.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fs14-java-fundamentals.iml" filepath="$PROJECT_DIR$/.idea/fs14-java-fundamentals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryClass/libraryClass.iml" filepath="$PROJECT_DIR$/libraryClass/libraryClass.iml" />
+    </modules>
+  </component>
+</project>
