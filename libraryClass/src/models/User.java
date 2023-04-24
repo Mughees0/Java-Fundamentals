@@ -2,21 +2,30 @@ package models;
 
 public class User {
 	int userId;
-	String name;
+	String UserName;
 	
+	Role role;
 	
-	public User(int userId, String name){
-		this.name= name;
-		this.userId= userId;
+	public User(int userId, String UserName){
+		this.userId = userId;
+		this.UserName= UserName;
 	}
 	
+	public enum Role {
+		ADMIN,
+		MEMBER,
+	}
+	
+	public Role getRole () {
+		return role;
+	}
 	
 	public int getUserId() {
 		return userId;
 	}
 	
 	public String getName() {
-		return name;
+		return UserName;
 	}
 	
 	public void setUserId(int userId) {
@@ -24,6 +33,16 @@ public class User {
 	}
 	
 	public void setName(String name) {
-		this.name = name;
+		this.UserName = name;
+	}
+	
+	
+	@Override
+	public String toString () {
+		return "User{" +
+							 "userId=" + userId +
+							 ", UserName='" + UserName + '\'' +
+							 ", role=" + role +
+							 '}';
 	}
 }

@@ -4,12 +4,14 @@ public class Book {
 	private int id;
 	private String title;
 	private String author;
+	private User borrowedBy;
 	private boolean isAvailable;
 	
 	public Book(int id, String title, String author, boolean isAvailable){
 		this.id = id;
 		this.title= title;
 		this.author = author;
+		this.borrowedBy = null;
 		this.isAvailable= isAvailable;
 	}
 	public String getTitle() {
@@ -23,6 +25,18 @@ public class Book {
 		return isAvailable;
 	}
 	
+	public void setBorrowedBy (User borrowedBy) {
+		this.borrowedBy = borrowedBy;
+	}
+	
+	public User getBorrowedBy () {
+		return borrowedBy;
+	}
+	
+	@Override
+	public String toString () {
+		return title + " "+ borrowedBy;
+	}
 	
 	public void setAuthor(String author) {
 		this.author = author;
@@ -36,20 +50,5 @@ public class Book {
 		this.title = title;
 	}
 	
-	public void borrowBook(Book book){
-		if(this.id == book.id && this.isAvailable){
-			this.isAvailable = false;
-			System.out.println(this.title+" is now borrowed");
-		}else {
-			System.out.println("The book is already borrowed");
-		}
-	}
-	public void returnBook(Book book){
-		if (this.id == book.id && !this.isAvailable){
-			this.isAvailable = true;
-			System.out.println(this.title+" is now returned");
-		} else {
-			System.out.println("The book is already returned");
-		}
-	}
+
 }
